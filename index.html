@@ -1,106 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>FUNDEDNEXT</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FUNDEDNEXT | Crypto Investment & Prop Firm Accounts</title>
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #050816;
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #050816, #0f172a, #111827);
-    }
-    h1 {
-      font-size: 42px;
-      color: #f5c542;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #d1d5db;
+      background: #020617;
+      color: #ffffff;
       line-height: 1.6;
-      font-size: 18px;
     }
-    .btn {
+
+    header {
+      min-height: 100vh;
+      padding: 30px 20px;
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.25), transparent 35%),
+        linear-gradient(135deg, #020617, #0f172a, #111827);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding-bottom: 70px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #facc15;
+      letter-spacing: 1px;
+    }
+
+    .tag {
+      border: 1px solid #334155;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #facc15;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #cbd5e1;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .buttons a {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 24px;
-      background: #f5c542;
-      color: #050816;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      padding: 14px 22px;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
     }
+
+    .primary {
+      background: #facc15;
+      color: #020617;
+    }
+
+    .secondary {
+      border: 1px solid #475569;
+      color: #ffffff;
+    }
+
     section {
-      padding: 50px 20px;
-      max-width: 900px;
+      padding: 70px 20px;
+      max-width: 1100px;
       margin: auto;
     }
+
+    .section-title {
+      color: #facc15;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
     .card {
-      background: #111827;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
       padding: 25px;
-      margin: 20px 0;
-      border-radius: 14px;
-      border: 1px solid #1f2937;
+      transition: 0.3s;
     }
-    h2 {
-      color: #f5c542;
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #facc15;
     }
+
+    .card h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #111827, #0f172a);
+      border: 1px solid #334155;
+      border-radius: 22px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .highlight h2 {
+      color: #facc15;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 20px;
+      background: #22c55e;
+      color: white;
+      padding: 15px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     footer {
+      text-align: center;
       padding: 30px;
       background: #020617;
-      color: #9ca3af;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>FUNDEDNEXT</h1>
-  <p>Digital Investment • Crypto Research • Prop Firm Accounts</p>
-  <p>Professional market intelligence, portfolio insights, and access to proprietary trading challenge accounts for ambitious traders and investors.</p>
-  <a class="btn" href="#contact">Get Started</a>
+  <nav>
+    <div class="logo">FUNDEDNEXT</div>
+    <div class="tag">Crypto • Prop Firm • Investment Intelligence</div>
+  </nav>
+
+  <div class="hero">
+    <h1>Professional <span>Crypto Investment</span> & Prop Firm Account Solutions</h1>
+    <p>
+      FUNDEDNEXT is a digital investment platform providing cryptocurrency research,
+      technical market analysis, portfolio insights, and access to proprietary trading
+      challenge accounts for ambitious traders and investors.
+    </p>
+
+    <div class="buttons">
+      <a href="#services" class="primary">Explore Services</a>
+      <a href="#contact" class="secondary">Contact Us</a>
+    </div>
+  </div>
 </header>
 
-<section>
-  <h2>About FUNDEDNEXT</h2>
-  <div class="card">
-    <p>FUNDEDNEXT is a digital investment platform providing cryptocurrency research, technical market analysis, portfolio insights, and access to proprietary trading challenge accounts.</p>
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Crypto Research</h3>
+      <p>Market-focused cryptocurrency research designed to help traders identify opportunities and understand digital asset trends.</p>
+    </div>
+
+    <div class="card">
+      <h3>Technical Market Analysis</h3>
+      <p>Professional analysis based on market structure, price action, support and resistance, and disciplined risk management.</p>
+    </div>
+
+    <div class="card">
+      <h3>Prop Firm Challenge Accounts</h3>
+      <p>Access to proprietary trading challenge accounts for traders looking to secure funding opportunities in global markets.</p>
+    </div>
   </div>
 </section>
 
 <section>
-  <h2>Our Services</h2>
-  <div class="card">
-    <h3>Crypto Research</h3>
-    <p>We provide market-focused cryptocurrency insights designed to help traders understand digital asset opportunities.</p>
-  </div>
-  <div class="card">
-    <h3>Technical Market Analysis</h3>
-    <p>Our analysis focuses on market structure, price action, trading psychology, and disciplined risk management.</p>
-  </div>
-  <div class="card">
-    <h3>Prop Firm Accounts</h3>
-    <p>We offer access to proprietary trading challenge accounts, helping traders pursue funding opportunities in global financial markets.</p>
+  <div class="highlight">
+    <h2>Built for Serious Traders</h2>
+    <p>
+      Our mission is to empower traders with professional tools, market intelligence,
+      investment insight, and funding opportunities to help them grow with discipline and confidence.
+    </p>
   </div>
 </section>
 
 <section>
-  <h2>Our Mission</h2>
-  <div class="card">
-    <p>Our mission is to empower traders with professional tools, market intelligence, and funding opportunities to achieve long-term success.</p>
+  <h2 class="section-title">Why Choose FUNDEDNEXT?</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Professional Approach</h3>
+      <p>We focus on research, structure, and strategy rather than emotional decision-making.</p>
+    </div>
+
+    <div class="card">
+      <h3>Funding Opportunities</h3>
+      <p>We connect traders with access to prop firm challenge accounts and account-growth pathways.</p>
+    </div>
+
+    <div class="card">
+      <h3>Market Intelligence</h3>
+      <p>We provide insights across crypto, forex, and financial markets for informed trading decisions.</p>
+    </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: your@email.com</p>
-    <p>WhatsApp: your number</p>
-  </div>
+<section id="contact" class="contact">
+  <h2 class="section-title">Get Started</h2>
+  <p>Contact FUNDEDNEXT for crypto research, investment insights, or prop firm account access.</p>
+
+  <a class="whatsapp" href="https://wa.me/2340000000000">Chat on WhatsApp</a>
 </section>
 
 <footer>
